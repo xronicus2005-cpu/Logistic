@@ -1,0 +1,26 @@
+/* Import the shared card structural styles from your signup view */
+@import url('./SignUp.css');
+
+/* Specific overrides to make the Sign In wrapper look tight and clean */
+.auth-card.spec-sign-in {
+  max-width: 420px; /* Narrower width for minimal text fields looks tighter */
+}
+
+/* Flex wrapper to separate label from 'Forgot password?' anchor link */
+.label-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.forgot-password-link {
+  font-size: 12px;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.forgot-password-link:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}

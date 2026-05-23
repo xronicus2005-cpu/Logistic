@@ -1,0 +1,366 @@
+/* Layout Context Initialization */
+.driver-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 24px;
+  background-color: var(--bg-surface);
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* --- HEADER CONTAINER --- */
+.driver-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--white);
+  border: 1px solid var(--bg-muted);
+  border-radius: var(--radius-lg);
+  padding: 24px 32px;
+  margin-bottom: 32px;
+  box-shadow: var(--shadow-sm);
+}
+
+.driver-identity {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.driver-avatar {
+  width: 44px;
+  height: 44px;
+  background-color: var(--primary-light);
+  color: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.driver-identity h1 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 2px 0;
+  letter-spacing: -0.4px;
+}
+
+.driver-identity p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* Status Indicator Pill */
+.status-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 30px;
+}
+
+.status-pill.free { background-color: #f0fdf4; color: #16a34a; }
+.status-pill.busy { background-color: #fffbeb; color: #d97706; }
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+
+/* --- TITLES AND SUBSECTIONS --- */
+.section-title {
+  margin-bottom: 16px;
+}
+
+.section-title h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-main);
+  margin: 0 0 4px 0;
+}
+
+.section-title p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.badge-live {
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #ef4444;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+  display: block;
+}
+
+/* --- LOCKED ACTIVE TASK DASHBOARD CARD --- */
+.active-delivery-section {
+  margin-bottom: 48px;
+}
+
+.active-card {
+  background-color: var(--white);
+  border: 1px solid var(--primary-light);
+  box-shadow: var(--shadow-md);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+}
+
+.active-card-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  align-items: center;
+}
+
+.delivery-main-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.order-meta {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.order-id-label {
+  font-family: monospace;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--text-main);
+}
+
+.order-product-tag {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--bg-muted);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-muted);
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.info-row {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.info-row label {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+}
+
+.delivery-address {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-main);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.delivery-customer {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-main);
+  margin: 0;
+}
+
+.icon-blue { color: var(--primary); margin-top: 2px; }
+.icon-slate { color: var(--text-muted); margin-top: 2px; }
+
+/* Control Operations Panel Buttons */
+.delivery-actions-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 240px;
+}
+
+.btn-delivered-done {
+  background-color: #16a34a;
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: var(--transition);
+}
+
+.btn-delivered-done:hover { background-color: #15803d; }
+
+.btn-driver-secondary {
+  text-decoration: none;
+  background-color: var(--bg-muted);
+  color: var(--text-main);
+  border-radius: var(--radius-sm);
+  padding: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: var(--transition);
+}
+
+.btn-driver-secondary:hover { background-color: #e2e8f0; }
+
+/* Placeholder panel when idle */
+.no-active-alert {
+  background-color: var(--white);
+  border: 1px dashed #cbd5e1;
+  padding: 32px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: var(--text-muted);
+  font-size: 14px;
+  margin-bottom: 48px;
+}
+
+/* --- THE OPEN GENERAL ORDERS POOL --- */
+.orders-pool-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 20px;
+}
+
+.pool-item-card {
+  background-color: var(--white);
+  border: 1px solid var(--bg-muted);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+
+.pool-item-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: #cbd5e1;
+}
+
+.pool-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.pool-id {
+  font-family: monospace;
+  font-weight: 700;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.pool-price {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.pool-body {
+  flex: 1;
+  margin-bottom: 24px;
+}
+
+.pool-product {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-main);
+  margin: 0 0 8px 0;
+}
+
+.pool-address-preview {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  line-height: 1.4;
+}
+
+.pool-address-preview svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Job Grab Action Triggers */
+.btn-accept-task {
+  width: 100%;
+  background-color: var(--primary-light);
+  color: var(--primary);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-accept-task:hover:not(:disabled) {
+  background-color: var(--primary);
+  color: var(--text-on-primary);
+}
+
+.btn-accept-task:disabled {
+  background-color: var(--bg-muted);
+  color: #94a3b8;
+  cursor: not-allowed;
+}
+
+.empty-pool-card {
+  text-align: center;
+  padding: 40px;
+  color: var(--text-muted);
+  font-size: 14px;
+  background: var(--white);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--bg-muted);
+}
+
+/* --- TABLET COMPACTNESS MODIFIERS --- */
+@media (max-width: 768px) {
+  .active-card-grid {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 28px;
+  }
+  .delivery-actions-panel {
+    width: 100%;
+  }
+  .driver-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}

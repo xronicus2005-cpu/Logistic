@@ -1,0 +1,143 @@
+/* Container layout remains centered but clean */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 24px;
+  background-color: var(--bg-surface);
+}
+
+/* Stripped down, elegant card */
+.auth-card {
+  background-color: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  width: 100%;
+  max-width: 480px; /* Slimmer max-width feels cleaner */
+  padding: 48px;     /* Increased padding for more breathing room */
+}
+
+.auth-title {
+  color: var(--text-main);
+  font-size: 28px;   /* Slightly larger, bold statement */
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin: 0 0 8px 0;
+  text-align: center;
+}
+
+.auth-subtitle {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin: 0 0 36px 0;
+  text-align: center;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /* Consistent rhythmic spacing */
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+/* Minimalist tiny text labels */
+.form-group label {
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase; /* Ultra-clean tracking style */
+  letter-spacing: 0.5px;
+}
+
+/* Sleek, thin-bordered inputs */
+.form-group input,
+.form-group select {
+  background-color: var(--white);
+  border: 1px solid #e2e8f0; /* Ultra-light clean border line */
+  border-radius: var(--radius-sm);
+  color: var(--text-main);
+  padding: 12px 16px;
+  font-size: 14px;
+  outline: none;
+  transition: var(--transition);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* High-end minimalist focus: no fuzzy glow, just clean tint shift */
+.form-group input:focus,
+.form-group select:focus {
+  border-color: var(--primary);
+  background-color: #fafafa;
+}
+
+/* Diminished hint text so it stays out of the way */
+.input-hint {
+  color: #94a3b8;
+  font-size: 11px;
+  margin-top: 2px;
+}
+
+/* Solid, professional action button */
+.btn-submit {
+  background-color: var(--primary);
+  color: var(--text-on-primary);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-top: 8px;
+}
+
+.btn-submit:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px); /* Premium subtle lift effect */
+}
+
+/* Separate footer section for secondary actions */
+.auth-footer {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.link-to-another-page {
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: 600;
+  margin-left: 6px;
+}
+
+.link-to-another-page:hover {
+  text-decoration: underline;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 520px) {
+  .auth-card {
+    padding: 32px 20px;
+    box-shadow: none; /* Flatten layout completely on small screens */
+    background: transparent;
+  }
+  
+  .form-row {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
